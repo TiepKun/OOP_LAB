@@ -1,0 +1,26 @@
+
+- When users choose "Cancel", the console displays the answer is "NO"
+- To customize the options to users only two options, we can use "showOptionDialog()" in JOptionPane and provide an array of strings that define 
+the custom options.
+Here is code for this:
+
+import javax.swing.JOptionPane;
+public class ChoosingOption {
+    public static void main(String[] args) 
+        Object[] options = {"Yes", "No"};
+        int option = JOptionPane.showOptionDialog(null, 
+                "Do you want to change to the first class ticket?", 
+                "Ticket Upgrade", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, options, options[0]);
+        if (option == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "You've chosen: Yes");
+        } else if (option == JOptionPane.NO_OPTION) {
+            JOptionPane.showMessageDialog(null, "You've chosen: No");
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid choice");
+        }
+        System.exit(0);
+    }
+}
