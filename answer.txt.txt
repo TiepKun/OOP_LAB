@@ -1,0 +1,7 @@
+- Java không cho phép tạo nhiều constructor chỉ khác nhau về kiểu trả về hoặc tên tham số, vì những khác biệt này không được xem là đủ để tạo ra các signature(chữ ký) phương thức riêng biệt
+- Nhưng nếu thêm tham số hoặc sử dụng kiểu dữ liệu khác nhau thì java sẽ cho phép
+- Ví dụ như ở bài này: 
+public DigitalVideoDisc(String title){}
+public DigitalVideoDisc(String category, float cost){}
+=> Như trên thì java sẽ cho phép vì khác tham số truyền vào
+Nhưng nếu bỏ đi "float cost" thì java sẽ báo lỗi
